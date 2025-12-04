@@ -1,6 +1,156 @@
-# CSCI 574 : ATP-Tennis-Ranking-Prediction
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/yXdXIqnw)
+# CSci 574: Final Class Project
 
 ## Project Description
-Data Set Name: ATP Tennis Ranking Data Source url: https://www.kaggle.com/datasets/isaienkov/atp-ranking
 
-The dataset I will be working with is related to ATP tennis rankings, which include several features that describe a player's performance and standing in professional tennis. The features include Rank, Player, Country, Total Points, Grand Slam Points, Masters Points, Other Points, and Tournaments. The Rank is the target variable for this model, representing the player's position in the ATP rankings. The Player feature serves as an identifier for each individual. The Country feature shows the country the player represents. The Total Points feature captures the sum of all points earned by a player across various tournaments. Grand Slam Points are earned from the four Grand Slam tournaments, the highest-ranking tournaments. Masters Points are accumulated from ATP Masters 1000 tournaments, and Other Points come from all other ATP tournaments that are not part of the Grand Slam or Masters. Tournaments represent the total number of tournaments a player has participated in, reflecting their activity level and consistency. The primary goal of this analysis is to predict the Rank of a player based on these other features. The dataset provides valuable insights into how different tournament types and player participation can influence a player's standing in the ATP rankings, which can be used for regression modeling.
+
+Data Set Name: ATP Tennis Ranking
+Data Source url: https://www.kaggle.com/datasets/isaienkov/atp-ranking
+
+The dataset I will be working with is related to ATP tennis rankings, which include several features that describe a player's performance and standing in professional tennis. The features include Rank, Player, Country, Total Points, Grand Slam Points, Masters Points, Other Points, and Tournaments. The Rank is the target variable for this model, representing the player's position in the ATP rankings. The Player feature serves as an identifier for each individual. The Country feature shows the country the player represents. The Total Points feature captures the sum of all points earned by a player across various tournaments. 
+Grand Slam Points are earned from the four Grand Slam tournaments, the highest-ranking tournaments. Masters Points are accumulated from ATP Masters 1000 tournaments, and Other Points come from all other ATP tournaments that are not part of the Grand Slam or Masters. Tournaments represent the total number of tournaments a player has participated in, reflecting their activity level and consistency. The primary goal of this analysis is to predict the Rank of a player based on these other features. The dataset provides valuable insights into how different tournament types and player participation can influence a player's standing in the ATP rankings, which can be used for regression modeling.
+
+
+
+## Instructions for Getting Started and Choosing a DataSet to Analyze
+
+Please choose a dataset and descirbe in general what are the features of the data you will be working with and you plans for
+analysis and modeling of the data.  I won't hold  you strictly to your plans here, as you thought may change as you explore the
+data.  But you should give me a paragraph or two description of your understanding of the data features and your thoughts
+on what you will do with the data.
+
+You can use a dataset of your own, though check with me directly to make sure it is ok.  If the data source does not have
+an easily accessable url you can point to, you will need to put the data into the `data` subdirectory and/or create scripts
+to download and obtain a copy of the data so that I can see it.  It is a requirement that I am able to look at the data you
+will use for your project, and run your code on it, so you will need to pick something that you can publically share.  I will
+probably only allow one person each semester to claim and work on a particular dataset from a public source, so it will be first-come-first
+serve and if you have a preference or something in mind you might want to finish your description here and commit early to get
+first dibs.  Some public data libraries that you can look at for datasets to use include:
+
+- [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+- [Kaggle Datasets](https://www.kaggle.com/datasets)
+- [Top Sources for Machine Learning Datasets](https://towardsdatascience.com/top-sources-for-machine-learning-datasets-bb6d0dc3378b) this is an article with some additional
+  data set repositories you can consider.
+  
+You cannot use datasets other students are using this semester.  Also you cannot use common popular datasets, especially ones that we
+have looked at (or will look at) in our class.  So most of the datasets I see on the UCI Popular datasets I will not let you use
+this semester, which include the Iris, Heart Disease, Wine Quality, Adult income and Breast Cancer Wisconsin datasets, which are too well known
+to make good projects.
+
+Please select a dataset by the due date.  Update this Readme with the url source of the dataset.  If you are not using a dataset with a easily accessible url, please put the data into
+the `data` subdirectory, and/or put in scripts to download the datasource into the `data` subdirectory.  Then write a paragraph or more describing the features of the dataset
+and your understanding of what the dataset includes before you have done any detailed exploration.  Describe hat labels
+you think you will be using as a target of your models.  You should plan to perform a supervisied learning task for your project.
+
+
+## Project Structure
+
+In general the directory structure for this project/class repository follows
+suggestions and best practices for create data science projects.
+See for example
+[Cookie Cutter data science](https://drivendata.github.io/cookiecutter-data-science/)
+and [Python data science projects](https://gist.github.com/ericmjl/27e50331f24db3e8f957d1fe7bbbe510)
+
+Here is the overview of the class repository structure:
+
+```
+$ pwd
+/path/to/local/repos/ml-python-class
+
+$ tree
+.
+├── data
+│   ├── data-file-1.csv
+│   ├── data-file-2.csv
+│   ├── ...
+│   └── data-file-X.csv
+├── docs
+│   ├── csci574-sem-YEAR-syllabus.docx
+│   └── csci574-sem-YEAR-syllabus.pdf
+├── figures
+│   ├── figure-01.png
+│   ├── figure-02.png
+│   ├── ...
+│   └── figure-XX.png
+├── lectures
+│   ├── Lecture-01-name.ipynb
+│   ├── Lecture-02-name.ipynb
+│   ├── Lecture-02a-Numpy.ipynb
+│   ├── ...
+│   └── Lecture-XX-name.ipynb
+├── scripts
+│   ├── bootstrap-anaconda3-python.sh
+│   ├── bootstrap-jupyterhub-server.sh
+│   ├── bootstrap.sh
+│   └── script-name.py
+├── src
+│   ├── ml_python_class
+│   │   ├── custom_funcs.py
+│   │   ├── __init__.py
+│   └── setup.py
+├── LICENSE
+├── README.md
+└── .devcontainer
+```
+
+**data/**
+
+All data files used for assignments and used in the lecture notebooks
+go here.  Some data files are local to the repository, but for larger data
+files, scripts may be used to download a larger data file to this
+repository data directory for local use.
+
+**docs**/
+
+Additional documentation for the class.  Class syllabus, and possible
+assingment descriptions, slides and handouts will be placed here.
+
+**figures**/
+
+All static image files used in documents and notebooks. Images may
+be generated by code and saved as part of a notebook or workflow, or
+may be static images captured for use in documentation.
+
+**lectures**/
+
+Jupyter/iPython notebooks used for course lectures, video lectures and in
+general the main resource with the course textbook and assignments for  
+learning the course concepts.
+
+**scripts**/
+
+Separate executable scripts used to set up project aspects, load data for
+the project, etc.  Bootstrap scripts are used by the Vagrant box
+provisioning process to set up the virtual vagrant box for use by the
+project.
+
+**src**/
+
+Project package(s) for this class.  Functions and classes that are of
+general use in more than one notebook are pulled out as functions
+(into the `custom_funcs.py` file), or separate functions and classes.
+The `ml_python_class` module can be installed in the normal Python way on the system using
+the `setup.py` file if needed, or it can be dynamically added to the
+python path using for example:
+
+```python
+import sys
+sys.path.append('../src')
+
+from ml_python_class.custom_funcs import version_information
+version_information()
+```
+
+**README.md, LICENSE**
+
+Top level markdown files holding general project information.  
+README.md markdown files may also be given in subdirectories for
+further information about aspects of the project.
+
+**Vagrantfile**
+
+A standard vagrant init file.  Contains the configuration and
+specifications to download and provision a vagrant box running
+Anaconda Python3 and a JupyterHub/JupyterLab server.
+
+
