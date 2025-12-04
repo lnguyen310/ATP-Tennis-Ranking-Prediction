@@ -1,1 +1,6 @@
-# ATP-Tennis-Ranking-Prediction
+# CSCI 574 : ATP-Tennis-Ranking-Prediction
+
+## Project Description
+Data Set Name: ATP Tennis Ranking Data Source url: https://www.kaggle.com/datasets/isaienkov/atp-ranking
+
+The dataset I will be working with is related to ATP tennis rankings, which include several features that describe a player's performance and standing in professional tennis. The features include Rank, Player, Country, Total Points, Grand Slam Points, Masters Points, Other Points, and Tournaments. The Rank is the target variable for this model, representing the player's position in the ATP rankings. The Player feature serves as an identifier for each individual. The Country feature shows the country the player represents. The Total Points feature captures the sum of all points earned by a player across various tournaments. Grand Slam Points are earned from the four Grand Slam tournaments, the highest-ranking tournaments. Masters Points are accumulated from ATP Masters 1000 tournaments, and Other Points come from all other ATP tournaments that are not part of the Grand Slam or Masters. Tournaments represent the total number of tournaments a player has participated in, reflecting their activity level and consistency. The primary goal of this analysis is to predict the Rank of a player based on these other features. The dataset provides valuable insights into how different tournament types and player participation can influence a player's standing in the ATP rankings, which can be used for regression modeling.
